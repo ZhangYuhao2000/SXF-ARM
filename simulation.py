@@ -380,7 +380,7 @@ class arm_simulate(QWidget, Ui_Form_SIMULATE):
         point_vertical[1][0] = output[248][0]
         point_vertical[1][1] = output[248][1]
         point_vertical[1][2] = 0
-        self.figure.axes.plot(point_vertical[0][0], point_vertical[0][1], point_vertical[0][2], 'orange')
+        self.figure.axes.plot(point_vertical[:, 0], point_vertical[:, 1], point_vertical[:, 2], 'orange')
         t_str = "(" + str(round(point_vertical[0][0], 2)) + "," + str(round(point_vertical[0][1], 2)) + "," + str(round(point_vertical[0][2], 2)) + ")"
         self.figure.axes.text(point_vertical[0][0], point_vertical[0][1], point_vertical[0][2], t_str, color='blue')
 
